@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مولد جدول المباريات</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مولد جدول المباريات</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>مرحبًا بك في مولد جدول المباريات</h1>
-    <p>سيتم تطوير الموقع هنا لاحقًا...</p>
+  <div class="container">
+    <h1>🎯 مولد جدول المباريات</h1>
+    
+    <div class="input-section">
+      <textarea id="matchesInput" rows="8" placeholder="أدخل المباريات هنا (مثال: فريق A vs فريق B - 18:00)..."></textarea>
+      <button onclick="generateTable()">🔄 إنشاء الجدول</button>
+    </div>
 
-    <script src="script.js"></script>
+    <div class="output-section" id="outputSection" style="display:none;">
+      <h2>📋 الجدول الناتج:</h2>
+      <div id="tableContainer"></div>
+
+      <button onclick="copyCode()">📎 نسخ كود بلوجر</button>
+      <button onclick="copyHTML()">📎 نسخ HTML كامل</button>
+      <textarea id="codeOutput" rows="6" readonly></textarea>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
